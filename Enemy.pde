@@ -1,7 +1,6 @@
-class Enemy extends Floater {
+class Enemy extends Floater{
 
-
-	public int getX() {
+public int getX() {
 		return (int) myCenterX;
 	}
 	public void setX(int x) {
@@ -34,38 +33,42 @@ class Enemy extends Floater {
 
 
 
-	public Enemy() {
-    	myDirectionX = 0;
-    	myDirectionY = 0;
-    	myCenterY = 350;
-    	myCenterX = 500;
-    	myPointDirection = 0;
-    	myColor = 11;
+
+Enemy(){
+	myDirectionX = ((int)(Math.random() * 10)-5);
+    myDirectionY = ((int)(Math.random() * 10)-5);
+   	myCenterY = ((int)(Math.random() * 800));
+   	myCenterX = ((int)(Math.random() * 1200));
+   	myPointDirection = 0;
+   	myColor = 105;
+
+   
 
 
-    	corners = 4;
-    	xCorners = new int[corners];
-    	yCorners = new int[corners];
-    	xCorners[0] = 15;
-    	yCorners[0] = 0;
-    	xCorners[1] = -20;
-    	yCorners[1] = -20;
-    	xCorners[2] = -5;
-    	yCorners[2] = 0;
-    	xCorners[3] = -20;
-    	yCorners[3] = 20;
-        
-        
+
+
 }
 
+public void move() {
+	super.move();
+	if(myCenterX > ship.getX()){
+		myCenterX = ship.getX() + 10;
+	}
+	if(myCenterX < ship.getX()){
+		myCenterX = ship.getX() + 10;
+	}
+	if(myCenterY > ship.getY()){
+		myCenterY = ship.getY() + 10;
+	}
+	if(myCenterY < ship.getY()){
+		myCenterY = ship.getY() + 10;
+	}
+	     
+}
 
-
-    public void move ()  
-  {      
-    super.move();
-    myDirectionX += ((int)(Math.random() * 5));
-    myDirectionY += ((int)(Math.random() * 5));
-    
-  }   
+public void show() {
+	fill(255);
+	ellipse((float)(myCenterX),(float)(myCenterY),10,10);
+}
 
 }

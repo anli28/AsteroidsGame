@@ -65,10 +65,17 @@ class Spaceship extends Floater {
     super.move();
     if(myDirectionX > 5) {
       myDirectionX = 5;
+      
+    }
+    if(myDirectionX < -5){
+      myDirectionX = -5;
     }
     if(myDirectionY > 5){
       myDirectionY = 5;
     }   
+    if(myDirectionY < -5){
+      myDirectionY = -5;
+    }      
   }   
 
 }
