@@ -55,7 +55,7 @@ abstract class Floater //Do NOT modify the Floater class! Make changes in the Sp
     else if (myCenterY < 0)
     {     
       myCenterY = height;    
-    }   
+    }  
   }   
   public void show ()  //Draws the floater at the current position  
   {             

@@ -1,4 +1,4 @@
-class Spaceship extends Floater {
+class Enemy extends Floater {
 
 
 	public int getX() {
@@ -34,13 +34,13 @@ class Spaceship extends Floater {
 
 
 
-	public Spaceship() {
+	public Enemy() {
     	myDirectionX = 0;
     	myDirectionY = 0;
     	myCenterY = 350;
     	myCenterX = 500;
     	myPointDirection = 0;
-    	myColor = 255;
+    	myColor = 11;
 
 
     	corners = 4;
@@ -63,12 +63,9 @@ class Spaceship extends Floater {
     public void move ()  
   {      
     super.move();
-    if(myDirectionX > 5) {
-      myDirectionX = 5;
-    }
-    if(myDirectionY > 5){
-      myDirectionY = 5;
-    }   
+    myDirectionX += ((int)(Math.random() * 5));
+    myDirectionY += ((int)(Math.random() * 5));
+    
   }   
 
 }
