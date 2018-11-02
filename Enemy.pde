@@ -40,7 +40,7 @@ Enemy(){
    	myCenterY = ((int)(Math.random() * 800));
    	myCenterX = ((int)(Math.random() * 1200));
    	myPointDirection = 0;
-   	myColor = 105;
+   	
 
    
 
@@ -55,13 +55,13 @@ public void move() {
 		myCenterX = ship.getX() + 10;
 	}
 	if(myCenterX < ship.getX()){
-		myCenterX = ship.getX() + 10;
+		myCenterX = ship.getX() - 10;
 	}
 	if(myCenterY > ship.getY()){
 		myCenterY = ship.getY() + 10;
 	}
 	if(myCenterY < ship.getY()){
-		myCenterY = ship.getY() + 10;
+		myCenterY = ship.getY() - 10;
 	}
 	     
 }

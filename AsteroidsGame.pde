@@ -44,13 +44,13 @@ public void keyPressed() {
 		ship.accelerate(0.5);
 	}
 	if(key == 'a'){
-		ship.turn(-20);
+		ship.turn(-15);
 	}
 	if(key == 's'){
 		ship.accelerate(-0.5);
 	}
 	if(key == 'd'){
-		ship.turn(20);
+		ship.turn(15);
 	}
 	if(key == '/'){
 		ship.setX((int)(Math.random() * 1000));
