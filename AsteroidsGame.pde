@@ -1,5 +1,5 @@
 Spaceship ship = new Spaceship();
-Enemy bobby = new Enemy();
+Orb bobby = new Orb();
 Star[] stars = new Star[200];
 ArrayList<Asteroid> aster = new ArrayList<Asteroid>();
 ArrayList<Bullet> bullets = new ArrayList<Bullet>();

@@ -59,7 +59,6 @@ class Spaceship extends Floater {
 }
 
 
-
     public void move ()  
   {      
     super.move();

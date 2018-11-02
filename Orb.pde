@@ -1,4 +1,4 @@
-class Enemy extends Floater{
+class Orb extends Floater{
 
 public int getX() {
 		return (int) myCenterX;
@@ -34,7 +34,7 @@ public int getX() {
 
 
 
-Enemy(){
+Orb(){
 	myDirectionX = ((int)(Math.random() * 10)-5);
     myDirectionY = ((int)(Math.random() * 10)-5);
    	myCenterY = ((int)(Math.random() * 800));
@@ -52,16 +52,16 @@ Enemy(){
 public void move() {
 	super.move();
 	if(myCenterX > ship.getX()){
-		myCenterX = ship.getX() + 10;
+		myCenterX = ship.getX() + 20;
 	}
 	if(myCenterX < ship.getX()){
-		myCenterX = ship.getX() - 10;
+		myCenterX = ship.getX() + 20;
 	}
 	if(myCenterY > ship.getY()){
-		myCenterY = ship.getY() + 10;
+		myCenterY = ship.getY() + 20;
 	}
 	if(myCenterY < ship.getY()){
-		myCenterY = ship.getY() - 10;
+		myCenterY = ship.getY() + 20;
 	}
 	     
 }
