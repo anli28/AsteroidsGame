@@ -37,8 +37,8 @@ public Bullet(Spaceship ship) {
 	double dRadians = myPointDirection*(Math.PI/180);
 	myDirectionX = 20 * Math.cos(dRadians) + ship.getDirectionX();
     myDirectionY = 20 * Math.sin(dRadians) + ship.getDirectionY();
-   	myCenterY = bobby.getY();
-   	myCenterX = bobby.getX();
+   	myCenterY = ship.getY();
+   	myCenterX = ship.getX();
 
  
 
@@ -48,7 +48,7 @@ public Bullet(Spaceship ship) {
 
 public void show() {
 	fill(255);
-	ellipse((float)myCenterX,(float)myCenterY,5,5);
+	ellipse((float)myCenterX,(float)myCenterY,7,7);
 
 }
 
