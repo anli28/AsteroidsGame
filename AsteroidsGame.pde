@@ -60,8 +60,8 @@ public void draw()
 
 
 	for(int i = 0; i < aster.size(); i++){
-		if(dist(aster.get(i).getX(),aster.get(i).getY(),ship.getX(),ship.getY()) < 30){
-			health = health - 5;
+		if(dist(aster.get(i).getX(),aster.get(i).getY(),ship.getX(),ship.getY()) < 45){
+			health = health - 3;
 	}
 }
 
