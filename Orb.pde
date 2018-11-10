@@ -35,11 +35,11 @@ public int getX() {
 
 
 Orb(){
-	myDirectionX = ((int)(Math.random() * 10)-5);
-    myDirectionY = ((int)(Math.random() * 10)-5);
-   	myCenterY = ((int)(Math.random() * 800));
-   	myCenterX = ((int)(Math.random() * 1200));
-   	myPointDirection = 0;
+	myDirectionX = ship.getDirectionX();
+    myDirectionY = ship.getDirectionY();
+   	myCenterY = ship.getY();
+   	myCenterX = ship.getX();
+   	myPointDirection = ship.getPointDirection();
    	
 
    
@@ -51,24 +51,24 @@ Orb(){
 
 public void move() {
 	super.move();
-	if(myCenterX > ship.getX()){
-		myCenterX = ship.getX() + 20;
-	}
-	if(myCenterX < ship.getX()){
-		myCenterX = ship.getX() + 20;
-	}
-	if(myCenterY > ship.getY()){
-		myCenterY = ship.getY() + 20;
-	}
-	if(myCenterY < ship.getY()){
-		myCenterY = ship.getY() + 20;
-	}
-	     
+	if(myDirectionX > 6) {
+      myDirectionX = 6;
+      
+    }
+    if(myDirectionX < -6){
+      myDirectionX = -6;
+    }
+    if(myDirectionY > 6){
+      myDirectionY = 6;
+    }   
+    if(myDirectionY < -6){
+      myDirectionY = -6;
+    }         
 }
 
 public void show() {
-	fill(255);
-	ellipse((float)(myCenterX),(float)(myCenterY),10,10);
+	fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
+	ellipse((float)(myCenterX),(float)(myCenterY),15,15);
 }
 
 }

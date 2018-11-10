@@ -40,15 +40,23 @@ public Bullet(Spaceship ship) {
    	myCenterY = ship.getY();
    	myCenterX = ship.getX();
 
- 
-
-   	
-	
 }
 
+
+public Bullet(Orb bobby){
+	myPointDirection = ship.getPointDirection();
+	double dRadians = myPointDirection*(Math.PI/180);
+	myDirectionX = 20 * Math.cos(dRadians) + ship.getDirectionX();
+    myDirectionY = 20 * Math.sin(dRadians) + ship.getDirectionY();
+   	myCenterY = bobby.getY();
+   	myCenterX = bobby.getX();
+
+}
+
+
 public void show() {
-	fill(255);
-	ellipse((float)myCenterX,(float)myCenterY,7,7);
+	fill(255,0,0);
+	ellipse((float)myCenterX,(float)myCenterY,6,6);
 
 }
 
