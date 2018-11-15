@@ -16,7 +16,7 @@ public void setup()
 	for(int i = 0; i < stars.length; i++){
 		stars[i] = new Star();
 	}
-	for(int i = 0; i < 15; i++){
+	for(int i = 0; i < 50; i++){
 		aster.add(new Asteroid());
 	}
 	
@@ -61,7 +61,7 @@ public void draw()
 
 	for(int i = 0; i < aster.size(); i++){
 		if(dist(aster.get(i).getX(),aster.get(i).getY(),ship.getX(),ship.getY()) < 45){
-			health = health - 3;
+			health = health - 2;
 	}
 }
 
@@ -73,11 +73,11 @@ public void draw()
   if(health < 75){
   	bobby.show();
   	bobby.move();
-  	bobby.setX(ship.getX() + 40);
+  	bobby.setX(ship.getX() + 42);
   	bobby.setY(ship.getY());
   	sarah.show();
   	sarah.move();
-  	sarah.setX(ship.getX() - 40);
+  	sarah.setX(ship.getX() - 42);
   	sarah.setY(ship.getY());
   }
 
