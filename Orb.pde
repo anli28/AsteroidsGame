@@ -68,7 +68,7 @@ public void move() {
 
 public void show() {
 	fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
-	ellipse((float)(myCenterX),(float)(myCenterY),15,15);
+	ellipse((float)(myCenterX),(float)(myCenterY),7,7);
 }
 
 }

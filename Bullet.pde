@@ -56,7 +56,7 @@ public Bullet(Orb bobby){
 
 public void show() {
 	fill(255,0,0);
-	ellipse((float)myCenterX,(float)myCenterY,6,6);
+	ellipse((float)myCenterX,(float)myCenterY,5,5);
 
 }
 

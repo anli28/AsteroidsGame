@@ -81,9 +81,10 @@ Asteroid(){
 }
 
 public void move() {
-	super.move();
 	turn(speed);
+	super.move();
+	
 	     
-}
+	}
 
 }
