@@ -45,14 +45,14 @@ class Spaceship extends Floater {
     	corners = 4;
     	xCorners = new int[corners];
     	yCorners = new int[corners];
-    	xCorners[0] = 8;
+    	xCorners[0] = 5;
     	yCorners[0] = 0;
-    	xCorners[1] = -12;
-    	yCorners[1] = -12;
-    	xCorners[2] = -5;
+    	xCorners[1] = -8;
+    	yCorners[1] = -8;
+    	xCorners[2] = -2;
     	yCorners[2] = 0;
-    	xCorners[3] = -12;
-    	yCorners[3] = 12;
+    	xCorners[3] = -8;
+    	yCorners[3] = 8;
         
         
 }

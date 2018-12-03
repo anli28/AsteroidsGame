@@ -70,7 +70,7 @@ public void draw()
 	for(int i = 0; i < aster.size(); i++){
 		if(dist(aster.get(i).getX(),aster.get(i).getY(),ship.getX(),ship.getY()) < 45){
 			aster.remove(i);
-			health = health - 30;
+			health = health - 15;
 	}
 }
 
@@ -82,11 +82,11 @@ public void draw()
   if(health < 75){
   	bobby.show();
   	bobby.move();
-  	bobby.setX(ship.getX() + 30);
+  	bobby.setX(ship.getX() + 20);
   	bobby.setY(ship.getY());
   	sarah.show();
   	sarah.move();
-  	sarah.setX(ship.getX() - 30);
+  	sarah.setX(ship.getX() - 20);
   	sarah.setY(ship.getY());
   }
 
@@ -113,13 +113,13 @@ public void draw()
   if(keyD == true){
   	ship.turn(5);
   }
-  if(keySpace == true){
-  	bullets.add(new Bullet(ship));
-	if(health < 75){
-		bullets.add(new Bullet(bobby));
-		bullets.add(new Bullet(sarah));
-  }
-}
+//   if(keySpace == true){
+//   	bullets.add(new Bullet(ship));
+// 	if(health < 75){
+// 		bullets.add(new Bullet(bobby));
+// 		bullets.add(new Bullet(sarah));
+//   }
+// }
   
 	
 
@@ -149,8 +149,13 @@ public void keyPressed() {
 
 	}
 	if(key == ' '){
-		keySpace = true;
+		// keySpace = true;
+		bullets.add(new Bullet(ship));
+	if(health < 75){
+		bullets.add(new Bullet(bobby));
+		bullets.add(new Bullet(sarah));
 	}
+  }
 }
 
 public void keyReleased() {
