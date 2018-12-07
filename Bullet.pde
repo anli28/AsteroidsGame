@@ -35,8 +35,8 @@ class Bullet extends Floater{
 public Bullet(Spaceship ship) {
 	myPointDirection = ship.getPointDirection();
 	double dRadians = myPointDirection*(Math.PI/180);
-	myDirectionX = 20 * Math.cos(dRadians) + ship.getDirectionX();
-    myDirectionY = 20 * Math.sin(dRadians) + ship.getDirectionY();
+	myDirectionX = 12 * Math.cos(dRadians) + ship.getDirectionX();
+    myDirectionY = 12 * Math.sin(dRadians) + ship.getDirectionY();
    	myCenterY = ship.getY();
    	myCenterX = ship.getX();
 
@@ -46,8 +46,8 @@ public Bullet(Spaceship ship) {
 public Bullet(Orb bobby){
 	myPointDirection = ship.getPointDirection();
 	double dRadians = myPointDirection*(Math.PI/180);
-	myDirectionX = 20 * Math.cos(dRadians) + ship.getDirectionX();
-    myDirectionY = 20 * Math.sin(dRadians) + ship.getDirectionY();
+	myDirectionX = 12 * Math.cos(dRadians) + ship.getDirectionX();
+    myDirectionY = 12 * Math.sin(dRadians) + ship.getDirectionY();
    	myCenterY = bobby.getY();
    	myCenterX = bobby.getX();
 
@@ -56,6 +56,7 @@ public Bullet(Orb bobby){
 
 public void show() {
 	fill(255,0,0);
+	noStroke();
 	ellipse((float)myCenterX,(float)myCenterY,5,5);
 
 }

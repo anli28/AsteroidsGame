@@ -24,7 +24,7 @@ public void setup()
 	for(int i = 0; i < stars.length; i++){
 		stars[i] = new Star();
 	}
-	for(int i = 0; i < 50; i++){
+	for(int i = 0; i < 30; i++){
 		aster.add(new Asteroid());
 	}
 	
@@ -99,6 +99,14 @@ public void draw()
 
   }
 
+
+if(aster.size() == 0) {
+	background(255);
+  	textSize(100);
+	fill(0);
+  	text("Lay Yang Zuo", 10, 300);
+}
+
   if(keyW == true){
   	ship.accelerate(0.3);
   	bobby.accelerate(0.3);
@@ -113,13 +121,13 @@ public void draw()
   if(keyD == true){
   	ship.turn(5);
   }
-//   if(keySpace == true){
-//   	bullets.add(new Bullet(ship));
-// 	if(health < 75){
-// 		bullets.add(new Bullet(bobby));
-// 		bullets.add(new Bullet(sarah));
-//   }
-// }
+  if(keySpace == true){
+  	bullets.add(new Bullet(ship));
+	if(health < 75){
+		bullets.add(new Bullet(bobby));
+		bullets.add(new Bullet(sarah));
+  }
+}
   
 	
 

@@ -41,12 +41,6 @@ Orb(){
    	myCenterX = ship.getX();
    	myPointDirection = ship.getPointDirection();
    	
-
-   
-
-
-
-
 }
 
 public void move() {

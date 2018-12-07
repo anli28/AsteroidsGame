@@ -37,16 +37,16 @@ public int getX() {
 
 Asteroid(){
 	if(Math.random() < 0.5){
-		speed = ((int)(Math.random() * 5));
+		speed = ((int)(Math.random() * 10)+1);
 	}else{
-		speed = ((int)(Math.random() * 5)-6);
+		speed = ((int)(Math.random() * 10)-10);
 	}
 	myDirectionX = ((int)(Math.random() * 10)-5);
     myDirectionY = ((int)(Math.random() * 10)-5);
    	myCenterY = ((int)(Math.random() * 800));
    	myCenterX = ((int)(Math.random() * 1200));
    	myPointDirection = 0;
-   	myColor = 105;
+   	myColor = 130;
 
    	corners = 11;
    	xCorners = new int[corners];
