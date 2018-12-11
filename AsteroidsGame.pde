@@ -4,6 +4,7 @@ private boolean keyS = false;
 private boolean keyD = false;
 private boolean keySlash = false;
 private boolean keySpace = false;
+private int count = 0;
 
 
 Spaceship ship = new Spaceship();
@@ -24,7 +25,7 @@ public void setup()
 	for(int i = 0; i < stars.length; i++){
 		stars[i] = new Star();
 	}
-	for(int i = 0; i < 30; i++){
+	for(int i = 0; i < 50; i++){
 		aster.add(new Asteroid());
 	}
 	
@@ -101,11 +102,23 @@ public void draw()
 
 
 if(aster.size() == 0) {
-	background(255);
-  	textSize(100);
-	fill(0);
-  	text("Lay Yang Zuo", 10, 300);
+	count++;
+	for(int i = 0; i < 100; i++){
+		aster.add(new Asteroid());
+		for(int z = 0; z < aster.size(); z++){
+			aster.get(z).show();
+			aster.get(z).move();
+		}
+	}
 }
+
+if(count > 1){
+	background(255);
+  	textSize(150);
+	fill(0);
+  	text("Lay Yang Zuo", 80, 400);
+}
+
 
   if(keyW == true){
   	ship.accelerate(0.3);
