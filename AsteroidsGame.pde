@@ -112,7 +112,18 @@ if(aster.size() == 0) {
 	}
 }
 
-if(count > 1){
+if(aster.size() == 0 && count == 2) {
+	count++;
+	for(int i = 0; i < 300; i++){
+		aster.add(new Asteroid());
+		for(int z = 0; z < aster.size(); z++){
+			aster.get(z).show();
+			aster.get(z).move();
+		}
+	}
+}
+
+if(count > 3){
 	background(255);
   	textSize(150);
 	fill(0);
