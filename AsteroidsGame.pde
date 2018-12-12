@@ -113,6 +113,7 @@ if(aster.size() == 0) {
 }
 
 if(aster.size() == 0 && count == 1) {
+	frameRate(120);
 	count++;
 	for(int i = 0; i < 150; i++){
 		aster.add(new Asteroid());
