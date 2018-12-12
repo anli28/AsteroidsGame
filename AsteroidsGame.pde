@@ -52,7 +52,7 @@ public void draw()
 
 	for(int i = 0; i < aster.size(); i++){
 		for(int z = 0; z < bullets.size(); z++){
-			if(dist(aster.get(i).getX(),aster.get(i).getY(),bullets.get(z).getX(),bullets.get(z).getY()) < 25){
+			if(dist(aster.get(i).getX(),aster.get(i).getY(),bullets.get(z).getX(),bullets.get(z).getY()) < 35){
 				aster.remove(i);
 				bullets.remove(z);
 				break;
@@ -103,7 +103,7 @@ public void draw()
 
 if(aster.size() == 0) {
 	count++;
-	for(int i = 0; i < 100; i++){
+	for(int i = 0; i < 75; i++){
 		aster.add(new Asteroid());
 		for(int z = 0; z < aster.size(); z++){
 			aster.get(z).show();
@@ -112,9 +112,9 @@ if(aster.size() == 0) {
 	}
 }
 
-if(aster.size() == 0 && count == 2) {
+if(aster.size() == 0 && count == 1) {
 	count++;
-	for(int i = 0; i < 300; i++){
+	for(int i = 0; i < 150; i++){
 		aster.add(new Asteroid());
 		for(int z = 0; z < aster.size(); z++){
 			aster.get(z).show();
@@ -123,7 +123,7 @@ if(aster.size() == 0 && count == 2) {
 	}
 }
 
-if(count > 3){
+if(count > 2){
 	background(255);
   	textSize(150);
 	fill(0);
